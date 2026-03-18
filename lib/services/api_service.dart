@@ -36,6 +36,8 @@ class ApiService {
       headers: {"Content-Type": "application/json"},
       body: jsonEncode({"email": email}),
     );
+    print("RAW RESPONSE: ${res.body}");
+
     return jsonDecode(res.body);
   }
 
